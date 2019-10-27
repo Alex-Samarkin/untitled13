@@ -1,6 +1,6 @@
 """
-Author: Самаркин А.И.
-Date: 26/10/19
+Author: Самаркин
+Date: 27/10/2019
 Purpose: test
 """
 
