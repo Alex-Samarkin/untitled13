@@ -1,6 +1,6 @@
 """
-Author: Самаркин
-Date: 27/10/2019
+Author: 
+Date: 
 Purpose: test
 """
 
@@ -12,16 +12,28 @@ import pandas as pd
 # модуль библиотеки для вывода графиков в стиле Matlab
 import matplotlib
 
-matplotlib.use('Qt5Agg')  # библиотека для вывода графиков на базе Qt5, нужен импорт модуля PyQt5
+matplotlib.use('TkAgg')  # библиотека для вывода графиков на базе Qt5, нужен импорт модуля PyQt5
 # модуль печати плоских графиков
 import matplotlib.pyplot as plt
 
 plt.style.use('bmh')  # можно попробовать также 'ggplot' или 'classic'
 fig = plt.figure()  # поверхность для вывода графиков (в виде всплывающего окна)
 
-from pandas_datareader import wb
+a=np.arange(10)
+print(a)
 
-matches = wb.search('gdp.*capita.*const')
-dat = wb.download(indicator='NY.GDP.PCAP.KD', start=2005, end=2008)
-print(dat)
-plt.show()
+b=np.arange(1,5)
+print(b)
+
+c=np.arange(0.0,10.0,0.25)
+print(c)
+
+d=np.linspace(0,10,1000)
+print(d)
+
+e = np.random.random([20])
+print(e)
+
+f = np.random.normal(0.0,1.0,200)
+print(f)
+

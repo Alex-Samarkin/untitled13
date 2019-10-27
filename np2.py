@@ -1,6 +1,6 @@
 """
-Author: Самаркин
-Date: 27/10/2019
+Author: 
+Date: 
 Purpose: test
 """
 
@@ -19,9 +19,13 @@ import matplotlib.pyplot as plt
 plt.style.use('bmh')  # можно попробовать также 'ggplot' или 'classic'
 fig = plt.figure()  # поверхность для вывода графиков (в виде всплывающего окна)
 
-from pandas_datareader import wb
+a = np.array([1, 2, 3, 4, 5])
+print(a)
 
-matches = wb.search('gdp.*capita.*const')
-dat = wb.download(indicator='NY.GDP.PCAP.KD', start=2005, end=2008)
-print(dat)
-plt.show()
+b=np.zeros([4,4],dtype=float)
+print(b)
+
+с=np.ones([5,3,2],dtype=float)
+print(с)
+
+
