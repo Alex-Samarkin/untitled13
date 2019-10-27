@@ -19,4 +19,10 @@ import matplotlib.pyplot as plt
 plt.style.use('bmh')  # можно попробовать также 'ggplot' или 'classic'
 fig = plt.figure()  # поверхность для вывода графиков (в виде всплывающего окна)
 
+from pandas_datareader import wb
 
+matches = wb.search('gdp.*capita.*const')
+dat = wb.download(indicator='NY.GDP.PCAP.KD', start=2005, end=2008)
+print(dat)
+
+# plt.show()
