@@ -42,23 +42,11 @@ days27=df.iloc[:,2].values
 monts59=df.iloc[:,3].values
 years4=df.iloc[:,4].values
 
-fig = plt.figure()
-plt.hist(monts59)
-plt.show()
-
-fig = plt.figure()
-plt.plot(monts59)
-plt.show()
-
 print('Sum of %g'%np.sum(monts59))
 print('Mean of %g'%np.mean(monts59))
 print('Median of %g'%np.median(monts59))
 print('Variance of %g'%np.var(monts59))
 print('Std dev of %g'%np.std(monts59))
-
-fig = plt.figure()
-plt.boxplot(monts59)
-plt.show()
 
 print('Sum of %g'%np.sum(years4))
 print('Mean of %g'%np.mean(years4))
@@ -66,5 +54,20 @@ print('Median of %g'%np.median(years4))
 print('Variance of %g'%np.var(years4))
 print('Std dev of %g'%np.std(years4))
 
-print(df.columns)
+pivot = df.pivot(index='Year',columns='Region',values=' 1-59 months')
+print(pivot)
 
+pivot.plot.bar(y=[0])
+plt.show()
+fig2 = pivot.plot.bar(y=[1])
+plt.show()
+fig3 = pivot.plot.bar(y=[2,3,4,5])
+plt.show()
+fig4 = pivot.plot.bar(y=[6])
+plt.show()
+
+pivot = df.pivot(index='Year',columns='Region',values=' 0-4 years')
+print(pivot)
+
+fig5 = pivot.plot.bar(y=[6,1],subplots=True)
+plt.show()
