@@ -33,7 +33,8 @@ f = open(local_file,'w')
 f.writelines(data)
 f.close()
 
-df = pd.read_csv(local_file,header=3)
+df = pd.read_csv(local_file,header=2)
+print(df.columns)
 
 regions = df.iloc[:,0].values
 years = df.iloc[:,1].values
@@ -65,4 +66,5 @@ print('Median of %g'%np.median(years4))
 print('Variance of %g'%np.var(years4))
 print('Std dev of %g'%np.std(years4))
 
+print(df.columns)
 
